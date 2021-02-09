@@ -1,0 +1,11 @@
+/*Para bajar la opacidad del fondo*/
+
+.backstretch img
+{
+    opacity: 0.3;
+}
+
+.backstretch .backstretch-item img
+{
+    opacity: 0.3;
+}
