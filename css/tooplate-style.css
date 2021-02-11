@@ -93,6 +93,7 @@ p:last-child { margin-bottom: 0; }
     position: absolute;
     top: 0;
     padding: 50px 20px;
+    background: rgba(0,0,0,0.5);
 }
 #tmMainNavToggle { display: none; }
 
@@ -109,7 +110,7 @@ p:last-child { margin-bottom: 0; }
     padding: 60px 50px;
     cursor: default;
     z-index: 100;
-    background: rgba(0,0,0,0.5);
+    /*background: rgba(0,0,0,0.5);*/
     color: white;
     z-index: 1000;
 }
@@ -146,7 +147,7 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-main-nav { font-size: 1.6rem; }
+.tm-main-nav { font-size: 1.6rem;}
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
     background-image: url(../img/nav-item.png);

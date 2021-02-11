@@ -69,13 +69,13 @@
 							</li>
 							<li>
 								<a href="#" id="tmNavLink2" class="scrolly"
-									data-bg-img="/introduction/imagenDeFondo (1).jpg" data-page="#tm-section-2">
+									data-bg-img="/introduction/imagenDeFondo.jpg" data-page="#tm-section-2">
 									<i class="fas fa-globe tm-nav-fa-icon"></i>
 									<span>Lenguaje Tecníco universal</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" id="tmNavLink3" class="scrolly" data-bg-img="introduction/imagenDeFondo (2).jpg"
+								<a href="#" id="tmNavLink3" class="scrolly" data-bg-img="introduction/imagenDeFondo.jpg"
 									data-page="#tm-section-3" data-page-type="carousel">
 									<i class="fas fa-map tm-nav-fa-icon"></i>
 									<span>Aplicacioes del Dibujo Tecníco</span>
@@ -125,7 +125,8 @@
 					</div>
 				</section>
 
-				<section id="tm-section-2" class="tm-section">
+				<section id="tm-section-2" class="tm-section container-fluid">
+
 					<div class="ml-auto">
 						<header class="mb-4">
 							<h1 class="tm-text-shadow text-primary">El Dibujo Tecníco Como lenguaje Tecnico universal
@@ -136,8 +137,9 @@
 							entendible que un lenguaje cotidiano. Es así porque en los planos representamos en un
 							conjunto de símbolos, gráficos y números, el objeto o idea que se quiere llevar a cabo. Este
 							también contiene su propio glosario de palabras que dentro del contexto del lenguaje es
-							indesprendible para quien analiza y elabora el plano.</p>
+							indesprendible para quien analiza y elabora el plano.</p>						
 					</div>
+
 				</section>
 
 				<!-- section 2 -->
@@ -399,7 +401,8 @@
 			// Change background image
 			var bgImg = currentNavItem.data("bgImg");
 			$.backstretch("img/" + bgImg);
-		
+
+			//nav 100% heigth
 		}
 
 		// Setup Nav Toggle Button
@@ -464,14 +467,15 @@
 				// Hide all pages
 				allPages.hide();
 
-
+				
 				$("#tm-section-1").fadeIn();
 
 				// Set up background first page
 				var bgImg = $("#tmNavLink1").data("bgImg");
 				
 				$.backstretch("img/" + bgImg, { fade: 500 });
-
+				let heigth = $("body").height()
+				$(".inner").height(heigth)
 
 				// Setup Carousel, Nav, and Nav Toggle
 				setupCarousel();
@@ -483,7 +487,8 @@
 				$(window).resize(function () {
 					setupCarousel();
 					setupFooter();
-
+					let heigth = $("body").height()
+					$(".inner").heigth(heigth)
 				});
 
 
