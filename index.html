@@ -374,6 +374,7 @@
 				e.preventDefault();
 
 				var currentNavItem = $(this);
+				console.log(currentNavItem)
 				changePage(currentNavItem);
 
 				setupCarousel();
@@ -406,14 +407,16 @@
 			$("#tmMainNavToggle").on("click", function () {
 				$(".sidebar").toggleClass("show");
 			});
+
 		}
+		//
 
 		// If there is enough room, stick the footer at the bottom of page content.
 		// If not, place it after the page content
 		function setupFooter() {
 
-			var padding = 100;
-			var footerPadding = 40;
+			var padding = 0;
+			var footerPadding = 0;
 			var mainContent = $("section" + currentPageID);
 			var mainContentHeight = mainContent.outerHeight(true);
 			var footer = $(".footer-link");
@@ -421,14 +424,9 @@
 			var totalPageHeight = mainContentHeight + footerHeight + footerPadding + padding;
 			var windowHeight = $(window).height();
 
-			if (totalPageHeight > windowHeight) {
-				$(".tm-content").css("margin-bottom", footerHeight + footerPadding + "px");
-				footer.css("bottom", footerHeight + "px");
-			}
-			else {
 				$(".tm-content").css("margin-bottom", "0");
-				footer.css("bottom", "20px");
-			}
+				footer.css("bottom", "0");
+			
 		}
 
 		// Everything is loaded including images.
@@ -455,15 +453,18 @@
 					});
 				}
 
+
 				// Hide all pages
 				allPages.hide();
+
 
 				$("#tm-section-1").fadeIn();
 
 				// Set up background first page
 				var bgImg = $("#tmNavLink1").data("bgImg");
-
+				
 				$.backstretch("img/" + bgImg, { fade: 500 });
+
 
 				// Setup Carousel, Nav, and Nav Toggle
 				setupCarousel();
@@ -475,6 +476,7 @@
 				$(window).resize(function () {
 					setupCarousel();
 					setupFooter();
+
 				});
 
 
