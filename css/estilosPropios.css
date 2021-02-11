@@ -1,5 +1,10 @@
 /*Para bajar la opacidad del fondo*/
 
+.backstretch
+{
+    width: 100%;
+}
+
 .backstretch img
 {
     opacity: 0.3;

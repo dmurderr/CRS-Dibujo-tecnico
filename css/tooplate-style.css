@@ -4,6 +4,7 @@ body {
 	font-size: 18px;
 	font-weight: 300;
     color: white;
+    overflow: scroll;
 	overflow-x: hidden;
     min-height: 100vh;
     height: 100%;
