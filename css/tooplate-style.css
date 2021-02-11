@@ -88,7 +88,12 @@ p:last-child { margin-bottom: 0; }
   min-height: 100vh;
   position: relative;
 }
-
+.inner
+{
+    position: absolute;
+    top: 0;
+    padding: 50px 20px;
+}
 #tmMainNavToggle { display: none; }
 
 .sidebar {
@@ -319,7 +324,13 @@ footer a { color: white; }
       flex: 0 0 100%;
       max-width: 100%;
       margin-bottom: 30px;
-  }
+    }
+
+    #scrollyInit
+    {
+        display: block;
+    }
+
 }
 
 @media (max-width: 991px) {    
@@ -353,7 +364,7 @@ footer a { color: white; }
     
     #tmSideBar {
         width: 300px;
-        position: absolute;
+        position: fixed;
         min-height: 100vh;
         height: auto;
         left: -300px;
@@ -382,10 +393,20 @@ footer a { color: white; }
       max-width: 620px;
       width: 100%;
     }
+
+    #scrollyInit
+    {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
   .tm-content { padding: 50px 30px; }
+
+  #scrollyInit
+  {
+      display: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -393,6 +414,10 @@ footer a { color: white; }
     max-width: 300px;
     padding-bottom: 50px;
   }
+  #scrollyInit
+    {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -401,6 +426,10 @@ footer a { color: white; }
     .footer-link {      
       margin: 0 auto;
       width: 90%;
+    }
+    #scrollyInit
+    {
+        display: none;
     }
 }
 

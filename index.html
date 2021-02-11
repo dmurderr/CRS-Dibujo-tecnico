@@ -39,7 +39,7 @@
 	</script>
 </head>
 
-<body>
+<body id="body">
 	<!-- Loader -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -55,6 +55,7 @@
 			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 
 				<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
+				<button id="scrollyInit" class="scrollInit menu-icon">&#8593;</button>
 
 				<div class="inner">
 					<nav id="tmMainNav" class="tm-main-nav">
@@ -68,13 +69,13 @@
 							</li>
 							<li>
 								<a href="#" id="tmNavLink2" class="scrolly"
-									data-bg-img="/introduction/imagenDeFondo.jpg" data-page="#tm-section-2">
+									data-bg-img="/introduction/imagenDeFondo(1).jpg" data-page="#tm-section-2">
 									<i class="fas fa-globe tm-nav-fa-icon"></i>
 									<span>Lenguaje Tecníco universal</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" id="tmNavLink3" class="scrolly" data-bg-img="constructive_bg_02.jpg"
+								<a href="#" id="tmNavLink3" class="scrolly" data-bg-img="introduction/imagenDeFondo(2).jpg"
 									data-page="#tm-section-3" data-page-type="carousel">
 									<i class="fas fa-map tm-nav-fa-icon"></i>
 									<span>Aplicacioes del Dibujo Tecníco</span>
@@ -374,7 +375,6 @@
 				e.preventDefault();
 
 				var currentNavItem = $(this);
-				console.log(currentNavItem)
 				changePage(currentNavItem);
 
 				setupCarousel();
@@ -399,6 +399,7 @@
 			// Change background image
 			var bgImg = currentNavItem.data("bgImg");
 			$.backstretch("img/" + bgImg);
+		
 		}
 
 		// Setup Nav Toggle Button
@@ -453,6 +454,12 @@
 					});
 				}
 
+				//button scroll
+
+				$("#scrollyInit").click(() =>
+				{
+					$('html, body').animate({scrollTop:0}, 700 );
+				})
 
 				// Hide all pages
 				allPages.hide();
