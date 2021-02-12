@@ -137,7 +137,8 @@
 							entendible que un lenguaje cotidiano. Es así porque en los planos representamos en un
 							conjunto de símbolos, gráficos y números, el objeto o idea que se quiere llevar a cabo. Este
 							también contiene su propio glosario de palabras que dentro del contexto del lenguaje es
-							indesprendible para quien analiza y elabora el plano.</p>						
+							indesprendible para quien analiza y elabora el plano.</p>	
+						<p class="mb-2 tm-font-big font-weight-bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam velit nulla eligendi incidunt perferendis sed. Minus similique totam placeat sunt libero quam repellendus perferendis voluptatibus quos mollitia doloremque, ut quod iusto quo, quidem quibusdam eaque id, soluta ipsa illo! Magni itaque magnam praesentium incidunt, repellendus aliquid voluptatum. Id harum libero et quisquam non accusantium est rerum earum adipisci quos esse provident dignissimos excepturi qui, exercitationem nemo! Impedit tenetur cupiditate dignissimos molestiae ullam sequi dolorem eos, consectetur reprehenderit, iure alias! Sunt dolor reprehenderit, eveniet debitis ab optio? Nesciunt, aliquam labore fugit incidunt delectus quasi? Facere magnam ea non, esse reprehenderit necessitatibus!</p>					
 					</div>
 
 				</section>
@@ -401,8 +402,6 @@
 			// Change background image
 			var bgImg = currentNavItem.data("bgImg");
 			$.backstretch("img/" + bgImg);
-
-			//nav 100% heigth
 		}
 
 		// Setup Nav Toggle Button
@@ -474,8 +473,6 @@
 				var bgImg = $("#tmNavLink1").data("bgImg");
 				
 				$.backstretch("img/" + bgImg, { fade: 500 });
-				let heigth = $("body").height()
-				$(".inner").height(heigth)
 
 				// Setup Carousel, Nav, and Nav Toggle
 				setupCarousel();
@@ -487,8 +484,7 @@
 				$(window).resize(function () {
 					setupCarousel();
 					setupFooter();
-					let heigth = $("body").height()
-					$(".inner").heigth(heigth)
+					
 				});
 
 
