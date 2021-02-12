@@ -41,3 +41,12 @@
     height: 50px;
     z-index: 1001;
 }
+
+
+@media (max-width: 500px)
+{
+    .tm-bg-transparent-black
+    {
+        padding: 1px;
+    }
+}
